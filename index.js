@@ -116,10 +116,6 @@ app.get("/logout", async (req, res, next) => {
   }
 });
 
-app.get("/promise", (req, res, next) => {
-  Promise.reject("promise rejected").catch(next);
-});
-
 app.get("/profile", (req, res) => {
   console.log(req.user);
 
