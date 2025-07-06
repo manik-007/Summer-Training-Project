@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+
+        <% if( success){%>
+
+            <h1><%=success%></h1>
+
+       <% }%>
+
+       <% if(error){%>
+
+            <h1><%=error%></h1>
+
+       <% }%>
+
+    </div>
+
+
+<h1>This is Home page</h1>
+    <div>
+        <% if(req.session.user){%>
+        <a href="/logout">Logout</a>
+      
+
+        <%}%>
+
+         <% if(!req.session.user){%>
+          <a href="/logout">Logout</a>
+        <a href="/signup">SignUp</a>
+         <a href="/login">Login</a>
+
+        <%}%>
+
+     
+    </div>
+    
+</body>
+</html>
